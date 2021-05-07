@@ -23,3 +23,18 @@ function anagramDifference(str1, str2) {
   }
   return result;
 }; 
+
+// kata 3
+
+function add(a,b){
+  var res = '', c = 0;
+  a = a.split('');
+  b = b.split('');
+  while (a.length || b.length || c) {
+    c += ~~a.pop() + ~~b.pop();
+    res = c % 2 + res;
+    c = c > 1;
+  }
+  res = res.replace(/^0+/, '');
+  return res || '0';
+};
