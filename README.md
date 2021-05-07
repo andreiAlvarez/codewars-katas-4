@@ -10,4 +10,4 @@ https://www.codewars.com/kata/5b1b27c8f60e99a467000041/train/javascript
 
 ## kata 3
 
-https://www.codewars.com/kata/5245a9138ca049e9a10007b8/train/javascript
+https://www.codewars.com/kata/55c11989e13716e35f000013/train/javascript
