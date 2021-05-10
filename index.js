@@ -38,3 +38,25 @@ function add(a,b){
   res = res.replace(/^0+/, '');
   return res || '0';
 };
+
+// kata 4
+
+function guessGifts(wishlist, presents) {
+const arr = []
+  for (let i=0;i<wishlist.length;i++){
+    for (let j=0;j<presents.length;j++){
+      let gift = wishlist[i]
+      if (gift.size===presents[j].size&&gift.clatters===presents[j].clatters&&gift.weight===presents[j].weight){
+        arr.push(gift.name)
+        break;
+      }
+    }
+  }; 
+  
+  // solution 2 
+  
+  const guessGifts = (wishlist, presents) =>  
+  wishlist.filter(e=> presents.some(x=> x.size == e.size && 
+                                        x.clatters == e.clatters && 
+                                        x.weight == e.weight))
+          .map(e=> e.name);
