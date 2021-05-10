@@ -60,3 +60,27 @@ const arr = []
                                         x.clatters == e.clatters && 
                                         x.weight == e.weight))
           .map(e=> e.name);
+// kata 5
+  
+function spyOn (func) {
+  let callCount = 0;
+  const calledWith = [];
+  const returnVals = [];
+  function spy (...args) {
+    const returnVal = func(...args);
+    callCount++;
+    calledWith.push(...args);
+    returnVals.push(returnVal);
+    return returnVal;
+  }
+  spy.callCount = function () {
+    return callCount;
+  };
+  spy.wasCalledWith = function (val) {
+    return calledWith.includes(val);
+  };
+  spy.returned = function (val) {
+    return returnVals.includes(val);
+  };
+  return spy;
+}; 
