@@ -103,3 +103,18 @@ function spyOn (func) {
     }
     return reg;
 };
+
+  // kata 7 
+  
+  const firstNonRepeatingLetter = s =>  s[
+      s
+        .toLowerCase()
+        .split("")
+        .findIndex(
+          letter =>
+            s
+              .toLowerCase()
+              .split("")
+              .filter(l => l === letter).length === 1
+        )
+    ] || "";
