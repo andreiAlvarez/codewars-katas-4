@@ -118,3 +118,22 @@ function spyOn (func) {
               .filter(l => l === letter).length === 1
         )
     ] || "";
+
+  // kata 7 
+  
+  function getStartTime(schedules, duration) {
+  function toMinutes(s) {
+    return s.split(':').reduce(function(h, m) {
+      return parseInt(h) * 60 + parseInt(m);
+    });
+  }
+  return schedules.reduce(function(p, n) {
+    return p.concat(n);
+  }, [['00:00', '09:00'], ['19:00', '24:00']]).sort().reduce(function(p, n) {
+    if (!p.start && toMinutes(p.last) + duration <= toMinutes(n[0])) {
+      p.start = p.last;
+    }
+    p.last = p.last < n[1] ? n[1] : p.last;
+    return p;
+  }, {last: '00:00', start: null}).start;
+}; 
