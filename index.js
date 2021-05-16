@@ -137,3 +137,16 @@ function spyOn (func) {
     return p;
   }, {last: '00:00', start: null}).start;
 }; 
+  
+  // kata 8 
+  
+  const beeramid = (bonus, price, lvl = 1) =>
+  bonus - lvl ** 2 * price < 0 ? --lvl : beeramid(bonus - lvl ** 2 * price, price, ++lvl);
+  
+  // solution 2
+  
+  var beeramid = function(bonus, price, level=1) {
+  if (level**2*price > bonus)
+    return level-1;
+  return beeramid(bonus-level**2*price, price, level+1)
+}
