@@ -39,3 +39,7 @@ https://www.codewars.com/kata/51e04f6b544cf3f6550000c1/train/javascript
 ## kata 10
 
 https://www.codewars.com/kata/5268988a1034287628000156/train/javascript
+
+## kata 11
+
+https://www.codewars.com/kata/513e08acc600c94f01000001/train/javascript
