@@ -167,3 +167,15 @@ function dfs(node,obj,d=0){
   dfs(node.left,obj,d+1)
   dfs(node.right,obj,d+1)
 }; 
+
+  // kata 10 
+  
+function rgb(r, g, b){
+  return toHex(r)+toHex(g)+toHex(b);
+}
+
+function toHex(d) {
+    if(d < 0 ) {return "00";}
+    if(d > 255 ) {return "FF";}
+    return  ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()
+};
