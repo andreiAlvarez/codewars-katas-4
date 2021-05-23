@@ -119,7 +119,7 @@ function spyOn (func) {
         )
     ] || "";
 
-  // kata 7 
+  // kata 8 
   
   function getStartTime(schedules, duration) {
   function toMinutes(s) {
@@ -138,7 +138,7 @@ function spyOn (func) {
   }, {last: '00:00', start: null}).start;
 }; 
   
-  // kata 8 
+  // kata 9
   
   const beeramid = (bonus, price, lvl = 1) =>
   bonus - lvl ** 2 * price < 0 ? --lvl : beeramid(bonus - lvl ** 2 * price, price, ++lvl);
@@ -151,7 +151,7 @@ function spyOn (func) {
   return beeramid(bonus-level**2*price, price, level+1)
 }
 
-  // kata 9
+  // kata 10
   
   function serpentineTree(node)
 { 
@@ -168,7 +168,7 @@ function dfs(node,obj,d=0){
   dfs(node.right,obj,d+1)
 }; 
 
-  // kata 10 
+  // kata 11
   
 function rgb(r, g, b){
   return toHex(r)+toHex(g)+toHex(b);
@@ -179,3 +179,8 @@ function toHex(d) {
     if(d > 255 ) {return "FF";}
     return  ("0"+(Number(d).toString(16))).slice(-2).toUpperCase()
 };
+  
+  // kata 12
+  
+  const whoIsNext = (names, r) =>
+  r > names.length ? whoIsNext(names, Math.floor((r - names.length + 1) / 2)) : names[--r];
