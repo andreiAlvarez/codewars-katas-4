@@ -55,3 +55,7 @@ https://www.codewars.com/kata/5267faf57526ea542e0007fb/train/javascript
 ## kata 14 
 
 https://www.codewars.com/kata/52685f7382004e774f0001f7/train/javascript
+
+## kata 15
+
+https://www.codewars.com/kata/54521e9ec8e60bc4de000d6c/train/javascript
