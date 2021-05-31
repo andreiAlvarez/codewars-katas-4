@@ -245,3 +245,10 @@ Math.floor = function(number) {
   }(formula, 1));
   return nums;
 }; 
+
+  
+  // kata 17 
+  
+  const pickPeaks = arr =>
+  (pos => ({pos, peaks: pos.map(val => arr[val])}))
+  (arr.slice(1).map((val, idx) => Math.sign(val - arr[idx]) * ++idx).filter(val => val).filter((val, idx, arr) => val > 0 && arr[++idx] < 0));
