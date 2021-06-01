@@ -252,3 +252,11 @@ Math.floor = function(number) {
   const pickPeaks = arr =>
   (pos => ({pos, peaks: pos.map(val => arr[val])}))
   (arr.slice(1).map((val, idx) => Math.sign(val - arr[idx]) * ++idx).filter(val => val).filter((val, idx, arr) => val > 0 && arr[++idx] < 0));
+
+  
+  // kata 18 
+  
+  const cakes = (needs, has) =>
+  Math.min(
+    ...Object.keys(needs).map(key => Math.floor(has[key] / needs[key] || 0))
+  );
