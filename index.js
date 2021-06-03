@@ -274,3 +274,10 @@ Math.floor = function(number) {
     .map(c => c.reduce((a, b) => a + b))
     .filter(s => s <= t)
     .sort((a, b) => b - a)[0] || null;
+
+  
+  // kata 20 
+  
+  const isMerge = (s, part1, part2) =>
+  (fn => !s ? !(part1 || part2) : fn(part1, part2) || fn(part2, part1))
+  ((p1, p2) => s[0] === p1[0] && isMerge(s.slice(1), p1.slice(1), p2));
