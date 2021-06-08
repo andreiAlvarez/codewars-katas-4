@@ -281,3 +281,8 @@ Math.floor = function(number) {
   const isMerge = (s, part1, part2) =>
   (fn => !s ? !(part1 || part2) : fn(part1, part2) || fn(part2, part1))
   ((p1, p2) => s[0] === p1[0] && isMerge(s.slice(1), p1.slice(1), p2));
+
+  // kata 21
+  
+  const score = dice =>
+  (dice.sort().join(``).match(/(\d)\1{2}|[15]/g) || []).reduce((pre, val) => pre + 100 * ({111: 10, 1: 1, 5: .5}[val] || val[0]), 0);
