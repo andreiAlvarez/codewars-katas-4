@@ -286,3 +286,9 @@ Math.floor = function(number) {
   
   const score = dice =>
   (dice.sort().join(``).match(/(\d)\1{2}|[15]/g) || []).reduce((pre, val) => pre + 100 * ({111: 10, 1: 1, 5: .5}[val] || val[0]), 0);
+
+  // kata 22
+  
+const partitionOn = (pred, items) =>
+  ((f, t) => (items.splice(0, items.length, ...f, ...t), f.length))
+  (items.filter(val => !pred(val)), items.filter(pred));
