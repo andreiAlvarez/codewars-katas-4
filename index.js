@@ -296,3 +296,17 @@ const partitionOn = (pred, items) =>
   // kata 23
   
   let lastDigit = (str1, str2) => +!+str2 || Math.pow(str1.slice(-1), str2.slice(-2) % 4 || 4) % 10;
+
+  // kata 24
+  
+  const decomp = n =>
+    Array(n - 1).fill(null).map((_, i) => i + 2).reduce((res, cur) => {
+        const clone = cur;
+        for(let i = 0; i < res.length; i++) {
+            const [val, n] = res[i];
+            if(cur % val) continue;
+            res[i--][1] = n + 1;
+            if((cur = cur / val) === 1) break;
+        }
+        return (cur !== clone || (res.push([cur, 1]))) && res;
+    }, []).map(([cur, n]) => `${cur}${n === 1 ? '' : `^${n}`}`).join(' * ');
