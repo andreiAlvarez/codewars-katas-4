@@ -310,3 +310,8 @@ const partitionOn = (pred, items) =>
         }
         return (cur !== clone || (res.push([cur, 1]))) && res;
     }, []).map(([cur, n]) => `${cur}${n === 1 ? '' : `^${n}`}`).join(' * ');
+
+  
+  // kata 25
+  
+  const solution = (first, sec) => first.reduce((a, el, i) => a + Math.abs(el - sec[i])**2, 0)/first.length;
